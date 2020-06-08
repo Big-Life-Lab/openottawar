@@ -1,0 +1,18 @@
+---
+title: "get_open_ottawa_usage"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+What does url_end refer too. For this function url end is the string after "https://open.ottawa.ca/datasets/" for example:
+"https://open.ottawa.ca/datasets/hospital-retirement-home-and-group-home-covid19-outbreaks" here url end is: "hospital-retirement-home-and-group-home-covid19-outbreaks"
+
+```{r cars}
+library(openottawar)
+# This downloads the data from that page and saves it as new_data.xlsx
+get_open_ottawa(url_end = "covid-19-hospitalization-data-for-ottawa-residents", file_dest = paste0(getwd(), "/new_data.xlsx"))
+```
+
