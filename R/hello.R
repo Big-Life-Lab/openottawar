@@ -1,17 +1,7 @@
-# Hello, world!
+# Sample function call
 #
-# This is an example function named 'hello'
-# which prints 'Hello, world!'.
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Install Package:           'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
+# get_open_ottawa(url_end = "covid-19-hospitalization-data-for-ottawa-residents", file_dest = paste0(getwd(), "/new_data.xlsx"))
+
 
 get_open_ottawa <- function(url_end, file_dest = paste0(getwd(), "/new_data.xlsx")) {
   data_info <- httr::GET(paste0("https://opendata.arcgis.com/api/v3/datasets?filter%5Bslug%5D=ottawa%3A%3A",url_end))
