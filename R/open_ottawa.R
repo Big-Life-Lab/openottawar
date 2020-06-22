@@ -9,8 +9,7 @@
 #' @examples
 #' tmp <- get_open_ottawa(url_end = "covid-19-hospitalization-data-for-ottawa-residents", file_dest = paste0(getwd(), "/new_data.xlsx"))
 #'
-#'  @export
-
+#' @export
 get_open_ottawa <-
   function(url_end,
            file_dest = paste0(getwd(), "/new_data.xlsx"),
