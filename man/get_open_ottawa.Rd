@@ -23,5 +23,4 @@ Function used to download single xlsx files from open ottawa
 \examples{
 tmp <- get_open_ottawa(url_end = "covid-19-hospitalization-data-for-ottawa-residents", file_dest = paste0(getwd(), "/new_data.xlsx"))
 
- @export
 }
