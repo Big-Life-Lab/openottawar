@@ -40,7 +40,7 @@ get_open_ottawa <-
       if(grepl(".xlsx", file_dest)){
         new_data <- readxl::read_excel(file_dest)
       }else if(grepl(".csv", file_dest)){
-        new_data <- read.csv2(file_dest)
+        new_data <- read.csv(file_dest)
       }
 
       return(new_data)
