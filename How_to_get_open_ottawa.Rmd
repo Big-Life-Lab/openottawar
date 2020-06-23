@@ -12,7 +12,9 @@ What does url_end refer too. For this function url end is the string after "http
 
 ```{r cars}
 library(openottawar)
-# This downloads the data from that page and saves it as new_data.xlsx
-get_open_ottawa(url_end = "covid-19-hospitalization-data-for-ottawa-residents", file_dest = paste0(getwd(), "/new_data.xlsx"))
+# This downloads the data from that page and saves it as new_data.csv
+data_hosp <- get_open_ottawa(url_end = "covid-19-hospitalization-data-for-ottawa-residents", file_dest = paste0(getwd(), "/new_data.csv"))
+#data_death <- get_open_ottawa(url_end = "covid-19-cases-and-deaths-in-ottawa", file_dest = paste0(getwd(), "/new_data.csv"))
+data_LTC <- get_open_ottawa(url_end = "covid-19-outbreaks-in-ottawa-healthcare-institutions", file_dest = paste0(getwd(), "/new_data.csv"))
 ```
 

@@ -21,22 +21,28 @@ get_open_ottawa <-
           url_end
         )
       )
+    extentions <- c(".csv", ".kml", ".zip")
     response_content <- httr::content(data_info, "parsed")
     data_id <- response_content$data[[1]]$id
     # Find href from link
     download.file(
       url = paste0(
-        "https://www.arcgis.com/sharing/rest/content/items/",
+        #"https://www.arcgis.com/sharing/rest/content/items/",
+        "https://opendata.arcgis.com/datasets/",
         data_id,
-        "/data"
+        "_0.csv"
       ),
       destfile = file_dest,
-      method = "auto",
-      mode = "wb"
+      method = "auto"
     )
 
     if (load_data) {
-      new_data <- readxl::read_excel(file_dest)
+      if(grepl(".xlsx", file_dest)){
+        new_data <- readxl::read_excel(file_dest)
+      }else if(grepl(".csv", file_dest)){
+        new_data <- read.csv(file_dest)
+      }
+
       return(new_data)
     }
 

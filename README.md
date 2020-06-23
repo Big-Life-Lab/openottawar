@@ -5,7 +5,7 @@ An R package to retreive CSV data from [Open Ottawa](https://open.ottawa.ca).
 This minimal package:
 
 - Retrieves a CVS file from [https://open.ottawa.ca](https://open.ottawa.ca).
-- Returns the file as an XLSX file.
+- Returns the file as a dataframe as well as saving the file.
 
 # Installation
 
@@ -18,17 +18,17 @@ remotes::install_github("big-life-lab/openottawar")
 
 # Usage
 
-This package downloads CSV data on the Open Ottawa website and saves it as an XLSX. CSV data is identifed using the website URL ending. 
+This package downloads CSV data on the Open Ottawa website and saves it as a CSV. CSV data is identifed using the website URL ending. 
 
 For example, the covid-19 hospital data for Ottawa residents is found at:
-`https://open.ottawa.ca/datasets/covid-19-hospitalization-data-for-ottawa-residents/data'
+`https://open.ottawa.ca/datasets/covid-19-hospitalization-data-for-ottawa-residents'
 
 ```
 # Retrive covid-19 hosptial data for Ottawa residents
 library(openottawar)
 
-# This downloads the data from hospital data and saves it as new_data.xlsx
-get_open_ottawa(url_end = "covid-19-hospitalization-data-for-ottawa-residents", file_dest = paste0(getwd(), "/new_data.xlsx"))
+# This downloads the data from hospital data and saves it as new_data.csv
+new_data <- get_open_ottawa(url_end = "covid-19-hospitalization-data-for-ottawa-residents", file_dest = paste0(getwd(), "/new_data.csv"))
 ```
 # Licence
 
