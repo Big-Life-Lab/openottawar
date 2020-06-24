@@ -27,8 +27,11 @@ For example, the covid-19 hospital data for Ottawa residents is found at:
 # Retrive covid-19 hosptial data for Ottawa residents
 library(openottawar)
 
-# This downloads the data from hospital data and saves it as new_data.csv
-new_data <- get_open_ottawa(url_end = "covid-19-hospitalization-data-for-ottawa-residents", file_dest = paste0(getwd(), "/new_data.csv"))
+# Download hospital data and save it as new_data.csv
+new_data <- get_open_ottawa(
+    url_end = "covid-19-hospitalization-data-for-ottawa-residents", 
+    file_dest = paste0(getwd(), 
+    "/new_data.csv"))
 ```
 # Licence
 
