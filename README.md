@@ -33,8 +33,11 @@ new_data <- get_open_ottawa(url_end = "covid-19-hospitalization-data-for-ottawa-
 # Licence
 
 The code of this package is licenced under MIT licence. Data retrieved from Open Ottawa is subject to Open Ottawa [data licence](https://ottawa.ca/en/city-hall/get-know-your-city/open-data#open-data-licence-version-2-0).
+
 # Contributing
 
 [Issues](https://github.com/big-life-lab/openottawar/issues) and [Pull requests](https://github.com/big-life-lab/openottawar/pulls) are appreciated.
 
+# Roadmap
 
+Open Ottawa is changing quickly. We are considering switching to the API format once the site stablizes.
